@@ -2,16 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "emailapi.py",
+      "src": "/api/emailapi.py",
       "use": "@vercel/python",
       "config": {
         "pythonVersion": "3.9"
       }
     }
   ],
-  "routes": [
-    { "src": "/", "dest": "emailapi.py" },
-    { "src": "/docs", "dest": "emailapi.py" },
-    { "src": "/openapi.json", "dest": "emailapi.py" }
-  ]
+   "routes": [
+    {
+      "src": "/otp/",
+      "dest": "api/emailapi.py"
+    }
+  ],
+
 }
