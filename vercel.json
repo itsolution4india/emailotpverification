@@ -1,19 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "/api/emailapi.py",
-      "use": "@vercel/python",
-      "config": {
-        "pythonVersion": "3.9"
-      }
-    }
-  ],
-   "routes": [
-    {
-      "src": "/otp/",
-      "dest": "api/emailapi.py"
-    }
-  ],
-
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
 }
